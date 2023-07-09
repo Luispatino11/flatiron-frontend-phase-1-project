@@ -1,3 +1,4 @@
+console.log('main.js connected');
 
 const searchTermsInput = document.body.querySelector('#search-terms');
 
@@ -20,6 +21,5 @@ const handleFormInputFocus = async () => {
   await getMealCategories();
 };
 
-const searchTermInput = document.body.querySelector("#search-terms");
 
-searchTermInput.addEventListener("focus", handleFormInputFocus);
+searchTermsInput.addEventListener('focus', handleFormInputFocus);
