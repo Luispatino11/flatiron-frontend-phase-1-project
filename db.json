@@ -1,0 +1,34 @@
+{
+    "goats": [
+      {
+        "id": 1,
+        "name": "Malcolm X",
+        "image": "https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images/artworkimages/medium/2/3-malcolm-x-michael-ochs-archives.jpg",
+        "quote": "Any time you beg another man to set you free, you will never be free. Freedom is something that you have to do for yourselves"
+      },
+      {
+        "id": 2,
+        "name": "Che Guevara",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Che_Guevara.jpg/1280px-Che_Guevara.jpg",
+        "quote": "We cannot be sure of having something to live for unless we are willing to die for it"
+      },
+      {
+        "id": 3,
+        "name": "Emiliano Zapata",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Emiliano_Zapata4.jpg/800px-Emiliano_Zapata4.jpg",
+        "quote": "I want to die as a slave to principles, not to men. I forgive those who murder and steal because they did it out of necessity, but a traitor never. If there is no justice for the people, let there be no peace for the government. It's better to die upon your feet than to live upon your knees!"
+      },
+      {
+        "id": 4,
+        "name": "Napoleon Bonaparte",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/800px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg",
+        "quote": "Success is the most convincing talker in the world"
+      },
+      {
+        "id": 5,
+        "name": "George Washington",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/800px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+        "quote": "If the freedom of speech is taken away then dumb and silent we may be led, like sheep to the slaughter"
+      }
+    ]
+  }

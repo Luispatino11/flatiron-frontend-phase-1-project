@@ -1,19 +1,68 @@
-//https://quote-garden.onrender.com/api/v3/quotes
+const API = "http://localhost:3000/goats"
 
-// ELEMENTS
-const authorSelect = document.querySelector("#authors")
-console.log(authorSelect)
+const element = document.querySelector("div#scroll-box");
+const output = document.querySelector("p#output");
 
+element.addEventListener("scroll", (event) => {
+  output.innerHTML = "Scroll event fired!";
+  setTimeout(() => {
+    output.innerHTML = "Waiting on scroll events...";
+  }, 1000);
+});
 
-// FUNCTION CALLS
-getAuthors()
+const button = document.querySelector("button");
 
-function getAuthors() {
-    fetch("https://quote-garden.onrender.com/api/v3/quotes?limit=20")
-    .then(r => r.json())
-    .then(quotes => console.log(quotes.data))
-    .catch()
+button.addEventListener("click", (event) => {
+  button.textContent = `Click count: ${event.detail}`;
+});
+
+const goatsListElement = document.getElementById("goatsList");
+
+async function fetchGoatsData() {
+  try {
+    const response = await fetch("http://localhost:3000/goats");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching goat data:", error);
+    return [];
+  }
 }
+
+function displayGoats(goats) {
+  const goatHTML = goats.map((goat) => {
+    return `
+      <div>
+        <h2> ${goat.name}</h2>
+        <p> ${goat.image}</p>
+        <p> ${goat.quote}</p>
+      </div>
+    `;
+  });
+
+  goatsListElement.innerHTML = goatHTML;
+}
+
+// Fetch goat data and display the information
+fetchGoatsData().then((goats) => displayGoats(goats));
+
+
+// //https://quote-garden.onrender.com/api/v3/quotes
+
+// // ELEMENTS
+// const authorSelect = document.querySelector("#authors")
+// console.log(authorSelect)
+
+
+// // FUNCTION CALLS
+// getAuthors()
+
+// function getAuthors() {
+//     fetch("https://quote-garden.onrender.com/api/v3/quotes?limit=20")
+//     .then(r => r.json())
+//     .then(quotes => console.log(quotes.data))
+//     .catch()
+// }
 
 
 // function renderAuthorOptions(authors) {
@@ -24,35 +73,6 @@ function getAuthors() {
 //         authorSelect.append(option)
 //     });
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // //get search field input
 // const searchTermsInput = document.body.querySelector("#search-terms");
 
